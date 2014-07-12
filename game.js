@@ -37,7 +37,7 @@ var directionEnum = {
 var board = {
 
   array: [
-    2,0,0,2,
+    0,0,0,0,
     0,0,0,0,
     0,0,0,0,
     0,0,0,0
@@ -47,8 +47,8 @@ var board = {
 
     for (var i = 0 ; i < 16 ; i++) {
 
-      // if (Math.random() < 0.4)
-      //   this.array[i] = 2;
+      if (Math.random() < 0.4)
+        this.array[i] = 2;
 
       var cell = document.getElementById("cell" + i);
       cell.firstChild.innerHTML = this.array[i] || "";
@@ -106,8 +106,13 @@ var board = {
 
     var chosenCell = Math.floor(Math.random() * (emptyCells.length - 1));
 
+    var spawnValue = 2;
+
+    if (Math.random() < 0.2)
+      spawnValue = 4;
+
     var spawnIndex = emptyCells[chosenCell];
-    this.array[spawnIndex] = 2;
+    this.array[spawnIndex] = spawnValue;
 
   }
 

@@ -40,7 +40,7 @@ body {
 	text-align: center;
 
 	color: #676767;
-	font-size: 52px;
+	font-size: 40px;
 
 	vertical-align: middle;
 	display: table-cell;
@@ -51,7 +51,7 @@ body {
 .tile {
 	text-align: center;
 	position: relative;
-	top: 17%;
+	top: 24%;
 }
 
 ._2 { background-color: white; }
