@@ -26,14 +26,6 @@ Mousetrap.bind('down', function () {
 
 });
 
-var directionEnum = {
-
-  CLOCKWISE: 0,
-
-  COUNTERCLOCKWISE: 1
-
-}
-
 var board = {
 
   array: [
