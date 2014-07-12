@@ -247,4 +247,39 @@ var game = {
 
 };
 
+var timer = {
+
+  seconds: 0,
+
+  minutes: 0,
+
+  displayDiv: document.getElementById('timeDisplay'),
+
+  tick: function () {
+
+    this.seconds++;
+
+    if (this.seconds == 60) {
+
+      this.minutes++;
+      this.seconds = 0; 
+      
+    }
+
+    window.setTimeout(function () { timer.tick() }, 1000);
+
+    this.updateDisplay();
+
+  },
+
+  updateDisplay: function () {
+
+    this.displayDiv.innerHTML = this.minutes + " : " + this.seconds;
+
+  }
+
+}
+
 board.init();
+
+timer.tick();
