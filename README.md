@@ -1,3 +1,8 @@
+Play
+----
+
+https://wenderen.github.io/2048
+
 About
 -----
 
